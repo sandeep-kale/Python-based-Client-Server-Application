@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flask-app-deployment
-  namespace: two-tier-ns
+  namespace: app-network
 spec:
   replicas: 1
   selector:
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: trainwithshubham/flaskapp:latest
+        image: sandeepkale000/test-app::latest
         ports:
           - containerPort: 5000
         env:
